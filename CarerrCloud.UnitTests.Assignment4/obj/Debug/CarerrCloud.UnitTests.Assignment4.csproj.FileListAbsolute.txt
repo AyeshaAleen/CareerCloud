@@ -1,0 +1,2 @@
+C:\Users\Ayesha\Source\Repos\CareerCloud.UnitTests.Assignment4\CarerrCloud.UnitTests.Assignment4\obj\Debug\CarerrCloud.UnitTests.Assignment4.csprojAssemblyReference.cache
+C:\Users\Ayesha\Source\Repos\CareerCloud.UnitTests.Assignment4\CarerrCloud.UnitTests.Assignment4\obj\Debug\CarerrCloud.UnitTests.Assignment4.csproj.CoreCompileInputs.cache
