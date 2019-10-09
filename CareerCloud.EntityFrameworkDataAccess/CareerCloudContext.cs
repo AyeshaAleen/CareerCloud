@@ -11,8 +11,10 @@ namespace CareerCloud.EntityFrameworkDataAccess
 {
     public class CareerCloudContext : DbContext
     {
-        public CareerCloudContext() : base(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString)
+        public CareerCloudContext(bool createProxy = true) : base(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString)
         {
+            Configuration.ProxyCreationEnabled = createProxy;
+            Database.Log = Console.WriteLine;
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -155,14 +157,15 @@ namespace CareerCloud.EntityFrameworkDataAccess
         DbSet<CompanyJobEducationPoco> companyJobEducations { get; set; }
         DbSet<CompanyJobPoco> companyJobs { get; set; }
         DbSet<CompanyJobSkillPoco> companyJobSkill { get; set; }
+        //DbSet<SecurityLoginPoco> companyProfile { get; set; }
         DbSet<CompanyLocationPoco> companyLocations { get; set; }
-        DbSet<SecurityLoginPoco> securityLogins { get; set; }
+        //DbSet<SecurityLoginPoco> securityLogins { get; set; }
+        DbSet<SecurityLoginPoco> securityRole { get; set; }
         DbSet<SecurityLoginsLogPoco> securityLoginsLogs { get; set; }
         DbSet<SecurityLoginsRolePoco> securityLoginsRoles { get; set; }
         DbSet<SystemCountryCodePoco> systemCountryCodes { get; set; }
         DbSet<SystemLanguageCodePoco> systemLanguageCodes { get; set; }
 
-
-
+        //public System.Data.Entity.DbSet<CareerCloud.Pocos.CompanyProfilePoco> CompanyProfilePocoes { get; set; }
     }
 }
